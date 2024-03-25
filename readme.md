@@ -20,7 +20,7 @@ Before running the Ansible playbook, ensure that you have the following prerequi
 - [x] Install Node (via NVM)
 - [x] Setup ZSH
 - [x] Setup Oh-my-zsh
-- [ ] Conditions to MacOS
+- [ ] Conditions to MacOS (https://opensource.com/article/22/6/install-software-macos-ansible-homebrew future guide)
 - [ ] Install Brew
 - [x] Install basic node packages
 - [ ] Add .dotfiles (when needed)
