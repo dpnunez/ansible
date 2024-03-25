@@ -22,7 +22,7 @@ Before running the Ansible playbook, ensure that you have the following prerequi
 - [x] Setup Oh-my-zsh
 - [ ] Conditions to MacOS
 - [ ] Install Brew
-- [ ] Install basic node packages
+- [x] Install basic node packages
 - [ ] Add .dotfiles (when needed)
 
  
