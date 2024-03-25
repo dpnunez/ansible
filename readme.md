@@ -13,6 +13,7 @@ This Ansible playbook is designed to be platform-agnostic, enabling seamless set
 Before running the Ansible playbook, ensure that you have the following prerequisites installed:
 
 - Ansible
+- Git
 
 ## Usage
 
