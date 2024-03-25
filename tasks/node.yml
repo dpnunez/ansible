@@ -1,0 +1,9 @@
+- name: Install nvm
+  shell: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+  tags: 
+  - node
+
+- name: Installing node version (current LTS)
+  command: bash -c '. ~/.nvm/nvm.sh; nvm install --lts'
+  tags:
+  - node

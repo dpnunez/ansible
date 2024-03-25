@@ -1,0 +1,39 @@
+- name: Install ZSH
+  apt: name=zsh
+  become: true
+  tags: 
+  - zsh
+
+- name: Change shell to zsh
+  shell: chsh -s $(which zsh)
+  become: true
+  tags: 
+  - zsh
+
+- name: Download Oh My Zsh installation script
+  get_url:
+    url: https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+    dest: /tmp/install_ohmyzsh.sh
+  tags:
+  - zsh
+
+- name: Run Oh My Zsh installation script
+  command: sh /tmp/install_ohmyzsh.sh --unattended
+  register: ohmyzsh_result
+  failed_when: "'FAILED' in ohmyzsh_result.stderr"
+  tags:
+  - zsh
+
+- name: Install zsh-autosuggestions
+  ansible.builtin.git:
+    repo: 'https://github.com/zsh-users/zsh-autosuggestions.git'
+    dest: "~/.oh-my-zsh/plugins/zsh-autosuggestions"
+  tags: 
+  - zsh
+
+# It'll be replaced by dotfiles repo in future
+- name: update our zshrc
+  shell: sed -i 's/(git/(git zsh-autosuggestions/g' ~/.zshrc
+  tags: 
+  - zsh
+  

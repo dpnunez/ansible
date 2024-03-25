@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker build . -f playground.Dockerfile -t playground-ansible
