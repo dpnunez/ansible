@@ -1,6 +1,6 @@
-If you want your Ansible playbook to work on both PCs and Macs, you might need to consider platform-specific tasks and configurations. Here's an updated README.md to reflect this:
+<p align="center"><em>If</span> you want your Ansible playbook to work on both PCs and Macs, you might need to consider platform-specific tasks and configurations. Here's an updated README.md to reflect this</em></p>
 
-# Ansible Configuration for Quick PC/Mac Environment Setup
+# My ansible setup
 
 Welcome to the Ansible configuration for setting up a new PC/Mac environment swiftly. This project is aimed at automating the setup process for my any new computer environment using Ansible, allowing you to get up and running with your preferred configuration as quickly as possible.
 
@@ -15,6 +15,17 @@ Before running the Ansible playbook, ensure that you have the following prerequi
 - Ansible
 - Git
 
+## Features
+- [x] Install ssh key's
+- [x] Install Node (via NVM)
+- [x] Setup ZSH
+- [x] Setup Oh-my-zsh
+- [ ] Conditions to MacOS
+- [ ] Install Brew
+- [ ] Install basic node packages
+- [ ] Add .dotfiles (when needed)
+
+ 
 ## Usage
 
 To use this Ansible playbook:
