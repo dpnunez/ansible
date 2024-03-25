@@ -16,6 +16,19 @@ Before running the Ansible playbook, ensure that you have the following prerequi
 
 ## Usage
 
+To use this Ansible playbook:
+
+1. Run the following command on your PC/Mac terminal:
+
+    ```bash
+    ansible-pull -U [URL_of_this_repository]
+    ```
+
+    Replace `[URL_of_this_repository]` with the URL of this repository.
+
+2. You'll be prompted to enter the decryption key for the vault files. Provide the key to proceed with the setup.
+
+3. Sit back and relax while Ansible sets up your PC/Mac environment.
 
 ## Customization
 
