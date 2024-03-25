@@ -1,9 +1,20 @@
-- name: Install nvm
-  shell: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-  tags: 
-  - node
-
-- name: Installing node version (current LTS)
-  command: bash -c '. ~/.nvm/nvm.sh; nvm install --lts'
+- name: Install nodejs and npm
+  become: true
+  apt:
+    name: ["nodejs", "npm"]
   tags:
-  - node
+    - install
+    - node
+- name: Install N
+  npm:
+    name: n
+    global: yes
+  tags:
+    - install
+    - node
+
+- name: Install correct version of Node
+  shell: n lts
+  tags:
+    - install
+    - node

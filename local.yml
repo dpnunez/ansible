@@ -17,3 +17,7 @@
       ansible.builtin.include_tasks: tasks/zsh-setup.yml
     - name: "node"
       ansible.builtin.include_tasks: tasks/node.yml
+    - name: "npm packages"
+      ansible.builtin.include_tasks: tasks/npm-packages.yml
+    - name: "Git config"
+      ansible.builtin.include_tasks: tasks/git.yml
