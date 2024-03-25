@@ -11,6 +11,9 @@
       - install
       - core
   tasks:
-  - include: tasks/ssh.yml
-  - include: tasks/zsh-setup.yml
-  - include: tasks/node.yml
+    - name: "ssh"
+      ansible.builtin.include_tasks: tasks/ssh.yml
+    - name: "zsh"
+      ansible.builtin.include_tasks: tasks/zsh-setup.yml
+    - name: "node"
+      ansible.builtin.include_tasks: tasks/node.yml
