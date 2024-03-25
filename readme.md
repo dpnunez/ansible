@@ -1,8 +1,8 @@
 <p align="center"><em>If</span> you want your Ansible playbook to work on both PCs and Macs, you might need to consider platform-specific tasks and configurations. Here's an updated README.md to reflect this</em></p>
 
-# My ansible setup
+# Ansible personal environment
 
-Welcome to the Ansible configuration for setting up a new PC/Mac environment swiftly. This project is aimed at automating the setup process for my any new computer environment using Ansible, allowing you to get up and running with your preferred configuration as quickly as possible.
+Welcome to the Ansible configuration for setting up a new PC/Mac environment swiftly. This project is aimed at automating the setup process for a new computer environment using Ansible, allowing you to get up and running with your preferred configuration as quickly as possible.
 
 ## Overview
 
@@ -42,6 +42,33 @@ To use this Ansible playbook:
 
 3. Sit back and relax while Ansible sets up your PC/Mac environment.
 
+## Testing
+
+To test the configurations provided in this repository, a Dockerfile is available. Follow these steps to test:
+
+1. Build the Docker image:
+
+    ```bash
+    docker build -t ansible-env .
+    ```
+
+2. Run the Docker container:
+
+    ```bash
+    docker run -it ansible-env /bin/bash
+    ```
+
+3. Run ansible locally or doing ansible-pull as described above
+
+    locally:
+    ```bash
+    ansible-playbook local.yml --ask-vault-pass
+    ```
+
+    remote:
+    ```bash
+    ansible-pull -U [URL_of_this_repository]
+    ```
 ## Customization
 
 Feel free to customize this Ansible playbook to suit your needs:
