@@ -49,13 +49,13 @@ To test the configurations provided in this repository, a Dockerfile is availabl
 1. Build the Docker image:
 
     ```bash
-    docker build -t ansible-env .
+    ./build-docker
     ```
 
 2. Run the Docker container:
 
     ```bash
-    docker run -it ansible-env /bin/bash
+    ./run-docker
     ```
 
 3. Run ansible locally or doing ansible-pull as described above
