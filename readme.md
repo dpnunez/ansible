@@ -1,4 +1,4 @@
-<p align="center"><em>If</span> you want your Ansible playbook to work on both PCs and Macs, you might need to consider platform-specific tasks and configurations. Here's an updated README.md to reflect this</em></p>
+If you want your Ansible playbook to work on both PCs and Macs, you might need to consider platform-specific tasks and configurations. Here's an updated README.md to reflect this
 
 # Ansible personal environment
 
