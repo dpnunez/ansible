@@ -1,4 +1,5 @@
 - hosts: localhost
+  become: true
   vars:
     source_key: "./.ssh/id_rsa"
     dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
@@ -21,3 +22,5 @@
       ansible.builtin.include_tasks: tasks/npm-packages.yml
     - name: "Git config"
       ansible.builtin.include_tasks: tasks/git.yml
+    - name: "dotfiles"
+      ansible.builtin.include_tasks: tasks/dotfiles.yml
